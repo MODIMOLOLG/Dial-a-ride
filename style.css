@@ -3,7 +3,8 @@
     --borderRadiusStandard: 1rem;
     --accentColorVar: 255, 255, 255;
     --accentColor1: rgb(var(--accentColorVar));
-    --accentColor2: rgb(255, 74, 74);
+    --accentColor2: #EB6F17;
+    --accentColor3: #5E8276;
     --accentColor1Semitransparent: rgba(var(--accentColorVar), 0.7);
     --linksColor: rgb(0, 49, 71);
 }
@@ -11,9 +12,11 @@
 .textDark {
     color: white;
 }
+
 .textLight {
     color: rgb(53, 53, 53);
 }
+
 .textOverImage {
     color: white;
 }
@@ -36,27 +39,32 @@ nav {
 
 .navDropdown {
     position: absolute;
-    top: 3.42rem;
+    top: 2rem;
     left: 0;
-    -webkit-backdrop-filter: blur(20px);
     overflow: hidden;
-    backdrop-filter: blur(20px);
     border-radius: calc(var(--borderRadiusStandard) + 0.5rem);
-    background-color: var(--accentColor1Semitransparent);
+    background-color: var(--accentColor1);
+    box-shadow: var(--shadowStandard);
     width: 7rem;
     height: 0;
     transition-duration: 300ms;
 }
 
-.navLinks:hover .navDropdown {
-    height: 20rem;
+.navLinks:hover .navDropItems2 {
+    height: 13.5rem;
     width: 20rem;
+    left: -1rem;
+}
+
+.navLinks:hover .navDropItems4 {
+    height: 26.5rem;
+    width: 20rem;
+    left: -1rem;
 }
 
 .navLogoImg {
     height: 4rem;
     position: absolute;
-    cursor: pointer;
 }
 
 .navContainerForLinks {
@@ -66,11 +74,40 @@ nav {
 }
 
 .navLinks {
-    padding: 1rem;
-    color: var(--linksColor);
-    font-weight: 500;
+    padding: 0.3rem;
+    color: var(--accentColor1);
     position: relative;
+    background-color: var(--accentColor3);
+    border-radius: .5rem;
+    overflow: hidden;
+    transition-duration: 200ms;
+    box-shadow: var(--shadowStandard);
+    overflow: hidden;
     cursor: pointer;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.navLinks:hover{
+    background-color: #EB6F17;
+}
+
+.navLinksDropdown{
+    margin-right: 0.25rem;
+}
+
+.navLinksArrow {
+    transition-duration: 200ms;
+    width: 0;
+    transform: translate(.4rem, 0);
+    opacity: 0;
+}
+
+.navLinks:hover .navLinksArrow {
+    width: 1rem;
+    opacity: 100%;
 }
 
 .navContact {
@@ -92,7 +129,7 @@ nav {
 .carousel-inner {
     border-radius: var(--borderRadiusStandard);
     box-shadow: var(--shadowStandard);
-    border: 0.1rem solid var(--accentColor1);
+    border: 0.2rem solid var(--accentColor2);
 }
 
 .cardObjNav {
@@ -103,9 +140,8 @@ nav {
     height: 6rem;
     width: 19rem;
     background-color: black;
-    cursor: pointer;
     transition-duration: 200ms;
-    outline: 0.1rem solid rgba(255, 255, 255, 0);
+    outline: 0.5rem solid rgba(255, 255, 255, 0);
 }
 
 .cardObj {
@@ -115,9 +151,8 @@ nav {
     margin-top: 2rem;
     height: 30rem;
     background-color: black;
-    cursor: pointer;
     transition-duration: 200ms;
-    outline: 0.1rem solid rgba(255, 255, 255, 0);
+    outline: 1rem solid rgba(255, 255, 255, 0);
 }
 
 .cardBodyNav {
@@ -129,7 +164,15 @@ nav {
 }
 
 .h2Nav {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    background-color: var(--accentColor3);
+    border-radius: .5rem;
+    padding: 0 .3rem;
+    overflow: hidden;
+    display: inline-block;
+    transition-duration: 200ms;
+    font-weight: normal;
+    box-shadow: var(--shadowStandard);
 }
 
 .cardImageNav {
@@ -140,12 +183,41 @@ nav {
     z-index: -99;
 }
 
+.cardObj .h2Nav {
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+}
+
+.h2Nav i {
+    width: 0;
+    transform: translate(1rem, 0);
+    transition-duration: 300ms;
+}
+
 .cardObjNav:hover .cardImageNav {
     transform: scale(1.2);
 }
 
+.cardObjNav:hover .fa-angle-right {
+    width: 1rem;
+    transform: translate(.4rem, 0);
+}
+
+.cardObj:hover .fa-angle-right {
+    width: 1rem;
+    transform: translate(.4rem, 0);
+}
+
+.cardObjNav:hover .h2Nav {
+    background-color: var(--accentColor2);
+}
+
+.cardObj:hover .h2Nav {
+    background-color: var(--accentColor2);
+}
+
 .cardObjNav:hover {
-    outline: 0.1rem solid white;
+    outline: 0.2rem solid var(--accentColor2);
 }
 
 .cardImage {
@@ -161,7 +233,7 @@ nav {
 }
 
 .ciMiddle {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 
 .ciBottom {
@@ -179,7 +251,7 @@ nav {
 }
 
 .cardObj:hover {
-    outline: 0.1rem solid var(--accentColor2);
+    outline: 0.2rem solid var(--accentColor2);
 }
 
 .accent {
@@ -189,7 +261,7 @@ nav {
     margin-bottom: 3rem;
     width: 100%;
     z-index: -1;
-    background-color: var(--accentColor2);
+    background-color: var(--accentColor3);
 }
 
 .panel {
