@@ -291,14 +291,9 @@ p {
 }
 
 @media only screen and (max-aspect-ratio: 4/5) {
-    .slide1 {
-        content: url(media/banner-vertical-1.jpg);
-    }
-
-    .slide2 {
-        content: url(media/banner-vertical-1.jpg);
-    }
-
+    .slide1 {content: url(media/banners/vertical/1.jpg);}
+    .slide2 {content: url(media/banners/vertical/2.jpg);}
+    .slide3 {content: url(media/banners/vertical/3.jpg);}
 }
 
 @media only screen and (max-width: 900px) {
