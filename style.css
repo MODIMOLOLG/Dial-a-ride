@@ -97,11 +97,11 @@ a {
     text-decoration: none !important;
 }
 
-.navLinks:hover{
+.navLinks:hover {
     background-color: #EB6F17;
 }
 
-.navLinksDropdown{
+.navLinksDropdown {
     margin-right: 0.25rem;
 }
 
@@ -290,10 +290,26 @@ p {
     margin: 0;
 }
 
+h2 {
+    margin-top: 1rem;
+    font-weight: 370;
+}
+h1 {
+    font-weight: 350;
+}
+
 @media only screen and (max-aspect-ratio: 4/5) {
-    .slide1 {content: url(media/banners/vertical/1.jpg);}
-    .slide2 {content: url(media/banners/vertical/2.jpg);}
-    .slide3 {content: url(media/banners/vertical/3.jpg);}
+    .slide1 {
+        content: url(media/news\ banners/vertical/1.jpg);
+    }
+
+    .slide2 {
+        content: url(media/news\ banners/vertical/2.jpg);
+    }
+
+    .slide3 {
+        content: url(media/news\ banners/vertical/3.jpg);
+    }
 }
 
 @media only screen and (max-width: 900px) {
